@@ -5,13 +5,15 @@ const questions = [
     // 1.
     {
         type: 'list',
-        name: 'position',
+        name: 'employeePosition',
         message: '1. What is your role?',
         choices: ['Manager', 'Intern', 'Engineer']
     },
     // 2.
     {
-        
+        type: 'input',
+        name: 'employeeName',
+        message: '2. What is your name?', 
     }
     // 3.
     // 4a.
@@ -19,24 +21,34 @@ const questions = [
         type: 'input',
         name: 'officeNumber',
         message: '4. what is office number',
-        when: (answers) => answers.position === 'Manager'
+        when: (answers) => answers.employeePosition === 'Manager'
     },
     // 4b.
     {
         type: 'input',
         name: 'githubName',
         message: '4. what is github name?',
-        when: (answers) => answers.position === 'Engineer'
+        when: (answers) => answers.employeePosition === 'Engineer'
     },
     // 4c.
     {
         type: 'input',
         name: 'schoolName',
         message: '4. what is School name?',
-        when: (answers) => answers.position === 'Intern'
-    },
+        when: (answers) => answers.employeePosition === 'Intern'
+    }
+    //5. Team Membership
+    {
+        type: 'list',
+        name: 'teamName',
+        message: '5. Which team are you on?',
+        choices: ["The Alliance", "Rock 'n' Sock","D-Generation X"]
+    }
 ]
 
+// The Alliance: Manager - Vince McMahon ; Engineer - Stephanie McMahon; Intern - Shane McMahon
+// Rock 'n' Sock: Manager - The Rock ; Engineer - Mick Foley; Intern - The Sock
+// D-Generation X: Manager - Chyna ; Engineer - Triple H; Intern - X-Pac
 
 
 
