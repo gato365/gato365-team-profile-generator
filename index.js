@@ -6,37 +6,44 @@ const questions = [
     {
         type: 'list',
         name: 'employeePosition',
-        message: '1. What is your role?',
+        message: '1. What is the employee\'s role?',
         choices: ['Manager', 'Intern', 'Engineer']
     },
     // 2.
     {
         type: 'input',
         name: 'employeeName',
-        message: '2. What is your name?', 
-    }
+        message: '2. What is the employee\'s name?', 
+    },
+
     // 3.
+
+    {
+        type: 'input',
+        name: 'employeeID',
+        message: '3. What is the employee\'s ID?', 
+    }, 
     // 4a.
     {
         type: 'input',
         name: 'officeNumber',
-        message: '4. what is office number',
+        message: '4. What is the the manager\'s office number?',
         when: (answers) => answers.employeePosition === 'Manager'
     },
     // 4b.
     {
         type: 'input',
         name: 'githubName',
-        message: '4. what is github name?',
+        message: '4. What is the engineer\'s GitHub account?',
         when: (answers) => answers.employeePosition === 'Engineer'
     },
     // 4c.
     {
         type: 'input',
         name: 'schoolName',
-        message: '4. what is School name?',
+        message: '4. What is the intern\'s school name?',
         when: (answers) => answers.employeePosition === 'Intern'
-    }
+    },
     //5. Team Membership
     {
         type: 'list',
