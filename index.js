@@ -54,13 +54,19 @@ const questions = [
 ]
 
 // The Alliance: Manager - Vince McMahon ; Engineer - Stephanie McMahon; Intern - Shane McMahon
-// Rock 'n' Sock: Manager - The Rock ; Engineer - Mick Foley; Intern - The Sock
-// D-Generation X: Manager - Chyna ; Engineer - Triple H; Intern - X-Pac
+// Information: The Alliance, also known as Team WCW/ECW and The Coalition, was a professional wrestling stable in the World Wrestling Federation (WWF, now WWE) that existed during the Invasion storyline from July to November 2001.
 
+
+
+// Rock 'n' Sock: Manager - The Rock ; Engineer - Mick Foley; Intern - The Sock
+//The Rock 'n' Sock Connection was a professional wrestling tag team of The Rock and Mankind/Mick Foley who wrestled in the World Wrestling Federation between 1999 and 2000 and briefly in 2004. As a team, they held the WWF Tag Team Championship three times
+
+// D-Generation X: Manager - Chyna ; Engineer - Triple H; Intern - X-Pac
+//The group originated in the World Wrestling Federation (WWF, now known as WWE) in the midst of the "Attitude Era" in 1997 as a foil to another prominent faction, The Hart Foundation and became one of the main driving forces behind the WWF competing with World Championship Wrestling (WCW) in the Monday Night Wars. In addition to two other founding members Chyna and Rick Rude aside from Michaels and Triple H, the group expanded with new additions X-Pac, The New Age Outlaws (Road Dogg and Billy Gunn), and Tori until it disbanded in August 2000. 
 
 
 function init() {
     inquirer.prompt(questions).then((data) => {
-        writeToFile(`${data.repoName}.md`, data);
+        writeToFile(`${data.index}.html`, data);
     });
 }
