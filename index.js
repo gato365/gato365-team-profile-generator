@@ -1,4 +1,6 @@
-
+// Packages needed for this application
+const inquirer = require('inquirer');
+const fs = require('fs');
 
 
 const questions = [
@@ -13,7 +15,7 @@ const questions = [
     {
         type: 'input',
         name: 'employeeName',
-        message: '2. What is the employee\'s name?', 
+        message: '2. What is the employee\'s name?',
     },
 
     // 3.
@@ -21,8 +23,8 @@ const questions = [
     {
         type: 'input',
         name: 'employeeID',
-        message: '3. What is the employee\'s ID?', 
-    }, 
+        message: '3. What is the employee\'s ID?',
+    },
     // 4a.
     {
         type: 'input',
@@ -49,7 +51,7 @@ const questions = [
         type: 'list',
         name: 'teamName',
         message: '5. Which team are you on?',
-        choices: ["The Alliance", "Rock 'n' Sock","D-Generation X"]
+        choices: ["The Alliance", "Rock 'n' Sock", "D-Generation X"]
     }
 ]
 
@@ -65,8 +67,35 @@ const questions = [
 //The group originated in the World Wrestling Federation (WWF, now known as WWE) in the midst of the "Attitude Era" in 1997 as a foil to another prominent faction, The Hart Foundation and became one of the main driving forces behind the WWF competing with World Championship Wrestling (WCW) in the Monday Night Wars. In addition to two other founding members Chyna and Rick Rude aside from Michaels and Triple H, the group expanded with new additions X-Pac, The New Age Outlaws (Road Dogg and Billy Gunn), and Tori until it disbanded in August 2000. 
 
 
+// -----------------Function Definitions--------------------
+// Author: Immanuel Williams PhD 
+// Date Created: (FLEX Staff)
+// Date Modified: 11/27/2022
+// Name: writeToFile
+// Purpose: writes the markdown file to a file based on the data input of data filename
+// Input: fileName, Data
+// Output: NA
+// Notes: NA
+// -----------------Function Definitions--------------------
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => err ? console.log(err) : console.log('Success!'));
+}
+
+// -----------------Function Definitions--------------------
+// Author: Immanuel Williams PhD 
+// Date Created: (FLEX Staff)
+// Date Modified: 11/27/2022
+// Name: writeToFile
+// Purpose: runs questions of prompt and stores information into data then runs writeToFile
+// Input: NA
+// Output: NA
+// Notes: NA
+// -----------------Function Definitions--------------------
 function init() {
     inquirer.prompt(questions).then((data) => {
-        writeToFile(`${data.index}.html`, data);
+        writeToFile(`${data.teamName}.html`, data);
     });
 }
+
+// Function call to initialize app
+init();
