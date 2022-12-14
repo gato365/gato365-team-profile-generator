@@ -93,7 +93,8 @@ function writeToFile(fileName, data) {
 // -----------------Function Definitions--------------------
 function init() {
     inquirer.prompt(questions).then((data) => {
-        writeToFile(`${data.teamName}.html`, data);
+        console.log("Made it");
+        // writeToFile(`${data.teamName}.md`, data);
     });
 }
 
