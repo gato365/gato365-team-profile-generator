@@ -1,41 +1,32 @@
 
-function generateHTML(currentManager,currentEngineer,currentIntern){
+
+function generateHTML(currentManager, currentEngineer, currentIntern) {
+
+    const teamInfo = currentManager.getTeamInfo();
+
+    if (teamInfo === "The Alliance") {
+        managePic = "vince-mcmahon.jpg";
+        engineerPic = "stephanie-mcmahon.jpg";
+        internPic = "shane-mcmahon.jpg";
+        decription = "The Alliance, also known as Team WCW/ECW and The Coalition, was a professional wrestling stable in the World Wrestling Federation (WWF, now WWE) that existed during the Invasion storyline from July to November 2001.";
+
+    } else if (teamInfo === " Rock 'n' Sock") {
+        managePic = "the-rock.jpg";
+        engineerPic = "mike-foley.jpg";
+        internPic = "mr-socko.jpg";
+        decription = "The Rock 'n' Sock Connection was a professional wrestling tag team of The Rock and Mankind/Mick Foley who wrestled in the World Wrestling Federation between 1999 and 2000 and briefly in 2004. As a team, they held the WWF Tag Team Championship three times";
+    } else if (teamInfo === "D-Generation X") {
+        managePic = "chyna.jpg";
+        engineerPic = "triple-h.jpg";
+        internPic = "xpac.jpg";
+        decription = "The group originated in the World Wrestling Federation (WWF, now known as WWE) in the midst of the \"Attitude Era\" in 1997 as a foil to another prominent faction, The Hart Foundation and became one of the main driving forces behind the WWF competing with World Championship Wrestling (WCW) in the Monday Night Wars. In addition to two other founding members Chyna and Rick Rude aside from Michaels and Triple H, the group expanded with new additions X-Pac, The New Age Outlaws (Road Dogg and Billy Gunn), and Tori until it disbanded in August 2000. ";
+    }
+
+
    
-   const teamInfo = currentManager.getTeamInfo();
 
-if (teamInfo === "The Alliance"){
-    managePic = "vince-mcmahon.jpg";
-    engineerPic = "stephanie-mcmahon.jpg";
-    internPic = "shane-mcmahon.jpg";
-    decription = "The Alliance, also known as Team WCW/ECW and The Coalition, was a professional wrestling stable in the World Wrestling Federation (WWF, now WWE) that existed during the Invasion storyline from July to November 2001.";
-
-} else if (teamInfo === " Rock 'n' Sock"){
-    managePic = "the-rock.jpg";
-    engineerPic = "mike-foley.jpg";
-    internPic = "mr-socko.jpg";
-    decription = "The Rock 'n' Sock Connection was a professional wrestling tag team of The Rock and Mankind/Mick Foley who wrestled in the World Wrestling Federation between 1999 and 2000 and briefly in 2004. As a team, they held the WWF Tag Team Championship three times";
-} else if(teamInfo === "D-Generation X"){
-    managePic = "chyna.jpg";
-    engineerPic = "triple-h.jpg";
-    internPic = "xpac.jpg";
-    decription = "The group originated in the World Wrestling Federation (WWF, now known as WWE) in the midst of the \"Attitude Era\" in 1997 as a foil to another prominent faction, The Hart Foundation and became one of the main driving forces behind the WWF competing with World Championship Wrestling (WCW) in the Monday Night Wars. In addition to two other founding members Chyna and Rick Rude aside from Michaels and Triple H, the group expanded with new additions X-Pac, The New Age Outlaws (Road Dogg and Billy Gunn), and Tori until it disbanded in August 2000. ";
-}
-
-
-    // The Alliance: Manager - Vince McMahon ; Engineer - Stephanie McMahon; Intern - Shane McMahon
-// Information: 
-
-
-
-// Rock 'n' Sock: Manager - The Rock ; Engineer - Mick Foley; Intern - The Sock
-
-
-// D-Generation X: Manager - Chyna ; Engineer - Triple H; Intern - X-Pac
-//
-   
-   
-    return `
-    <!DOCTYPE html>
+    const htmlFile = `
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -180,4 +171,15 @@ if (teamInfo === "The Alliance"){
 
 </body>
 
-</html>`;}
+</html>`;
+
+
+    return htmlFile;
+
+
+}
+
+
+
+// Generate Markdown File
+module.exports = generateHTML;
