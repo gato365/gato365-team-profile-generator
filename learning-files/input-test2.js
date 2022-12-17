@@ -3,9 +3,9 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 // Require Classses
 // const Employee = require("./Employee");
-const Manager = require("./Manager");
-const Engineer = require("./Engineer");
-const Intern = require("./Intern");
+const Manager = require("../lib/Manager");
+const Engineer = require("../lib/Engineer");
+const Intern = require("../lib/Intern");
 
 
 
@@ -68,7 +68,7 @@ const questionsEngineer = [
     // 4.
     {
         type: 'input',
-        name: 'githubName',
+        name: 'githubAccount',
         message: '4. What is the Engineer\'s GitHub account?'
     }
 ]
@@ -160,7 +160,7 @@ function init() {
                     dataEngineer.employeeEngineerName,
                     dataEngineer.employeeEngineerID,
                     dataEngineer.employeeEngineerEmail,
-                    dataEngineer.githubNamer);
+                    dataEngineer.githubAccount);
 
 
 
@@ -172,8 +172,7 @@ function init() {
                     dataIntern.schoolName);
 
 
-
-
+                    
             });
 
         });
