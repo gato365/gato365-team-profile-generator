@@ -103,7 +103,7 @@ function generateHTML(currentManager, currentEngineer, currentIntern) {
         <div class="d-flex justify-content-around align-items-center" >
 
             <div class="card" style="width: 35rem;" id="manager">
-                <img class="card-img-top" src="./images/${managerPic}" alt="Card image cap">
+                <img class="card-img-top" src="./assets/images/${managerPic}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title text-info">
                         <p> <b>Role:</b> Manager</p>
@@ -131,7 +131,7 @@ function generateHTML(currentManager, currentEngineer, currentIntern) {
 
 
             <div class="card" style="width: 35rem;" id="engineer">
-                <img class="card-img-top" src="./images/${engineerPic}" alt="Card image cap">
+                <img class="card-img-top" src="./assets/images/${engineerPic}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title text-info">
                         <p> <b>Role:</b> Engineer</p>
@@ -159,7 +159,7 @@ function generateHTML(currentManager, currentEngineer, currentIntern) {
 
 
             <div class="card" style="width: 35rem;" id="intern">
-                <img class="card-img-top" src="./images/${internPic}" alt="Card image cap">
+                <img class="card-img-top" src="./assets/images/${internPic}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title text-info">
                         <p> <b>Role:</b> Intern</p>
