@@ -1,5 +1,14 @@
 
-
+// -----------------Function Definitions--------------------
+// Author: Immanuel Williams PhD 
+// Date Created: 12/16/2022
+// Date Modified: 12/17/2022
+// Name: generateHTML
+// Purpose: Generate HTML file
+// Input: NA
+// Output: NA
+// Notes: NA
+// -----------------Function Definitions--------------------
 function generateHTML(currentManager, currentEngineer, currentIntern) {
 
     const teamInfo = currentManager.getTeamInfo();
@@ -191,5 +200,5 @@ function generateHTML(currentManager, currentEngineer, currentIntern) {
 
 
 
-// Generate Markdown File
+// Generate Mdoule
 module.exports = generateHTML;
